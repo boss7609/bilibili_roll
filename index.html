@@ -122,7 +122,7 @@ body,html{margin:0;padding:0;height:100%;background:#000;font-family:Microsoft J
 
 <div id="map"></div>
 <div id="tools">左鍵拖曳＝移動｜左鍵點＝切紅藍｜右鍵＝調圖層｜雙擊＝切寶箱</div>
-<button id="diceBtn">擲一次骰子 (消耗200電池)</button>
+<button id="diceBtn">擲一次骰子 (消耗1000電池)</button>
 <div id="log">冬日大富翁已載入完成！</div>
 <div id="rewardList"></div>
 <div id="stats">次數: 0<br>總消耗電池: 0<br>總消耗元: 0<br>總獲得電池: 0<br>總獲得元: 0</div>
@@ -249,9 +249,9 @@ function updateStats(){
 
 // 擲骰子
 document.getElementById('diceBtn').onclick = ()=>{
-  // 消耗 200 電池
+  // 消耗 1000 電池
   turnCount++;
-  totalBattery += 200;
+  totalBattery += 1000;
   updateStats();
 
   const steps = Math.floor(Math.random()*6)+1;
@@ -294,3 +294,4 @@ document.getElementById('diceBtn').onclick = ()=>{
 </script>
 </body>
 </html>
+
